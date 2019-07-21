@@ -11,8 +11,10 @@ scipy = "*"
 scikit-learn = "*"
 matplotlib = "*"
 pandas = "*"
-pillow = "*"
 graphviz = "*"
+jupyter = "*"
+pillow = "*"
+imageio = "*"
 
 [requires]
 python_version = "3.7"
