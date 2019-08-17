@@ -45,10 +45,14 @@ def plot_cross_val_selection():
 
 
 def plot_grid_search_overview():
+    # 创建图形，画布大小为10，3英寸，每英寸有70个像素点
     plt.figure(figsize=(10, 3), dpi=70)
+    # 获取当前子图
     axes = plt.gca()
+    # 设置子图信息，坐标轴可见性
     axes.yaxis.set_visible(False)
     axes.xaxis.set_visible(False)
+    # 设置是否绘制轴矩形
     axes.set_frame_on(False)
 
     def draw(ax, text, start, target=None):

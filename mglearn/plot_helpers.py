@@ -24,6 +24,7 @@ cdict = {'red': [(0.0, 0.0, cm2(0)[0]),
 ReBl = LinearSegmentedColormap("ReBl", cdict)
 
 
+# 离散方法，离散点图形
 def discrete_scatter(x1, x2, y=None, markers=None, s=10, ax=None,
                      labels=None, padding=.2, alpha=1, c=None, markeredgewidth=None):
     """Adaption of matplotlib.pyplot.scatter to plot classes or clusters.
