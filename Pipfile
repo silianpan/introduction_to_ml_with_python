@@ -8,13 +8,15 @@ verify_ssl = true
 [packages]
 numpy = "*"
 scipy = "*"
-scikit-learn = "*"
 matplotlib = "*"
 pandas = "*"
 graphviz = "*"
 jupyter = "*"
 pillow = "*"
 imageio = "*"
+joblib = "*"
+scikit-learn = "*"
+six = "*"
 
 [requires]
 python_version = "3.7"
