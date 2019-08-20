@@ -31,8 +31,18 @@ def plot_knn_classification(n_neighbors=1):
     print(closest.T)
 
     # T行列转置
+    # 绘制箭头
     for x, neighbors in zip(X_test, closest.T):
         for neighbor in neighbors[:n_neighbors]:
+            '''
+            从(x, y)到(x+dx, y+dy)绘制箭头
+            (x, y)起始点的坐标
+            dx,dy: 分别沿x和y方向上的箭头长度
+            head_width: 箭头的宽度
+            edgecolor或者ec: 颜色或无或'自动'
+            facecolor或fc: 颜色或无
+            C = Cyan(青色） M = Magenta（洋红或品红） Y = Yellow（黄色） K = blacK（黑色）
+            '''
             plt.arrow(x[0], x[1], X[neighbor, 0] - x[0],
                       X[neighbor, 1] - x[1], head_width=0, fc='k', ec='k')
 
