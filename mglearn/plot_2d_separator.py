@@ -109,6 +109,12 @@ def plot_2d_separator(classifier, X, fill=False, ax=None, eps=None, alpha=1,
     yy = np.linspace(y_min, y_max, 1000)
 
     X1, X2 = np.meshgrid(xx, yy)
+    '''
+    numpy中的ravel()、flatten()、squeeze()都有将多维数组转换为一维数组的功能，区别：
+    ravel()：如果没有必要，不会产生源数据的副本
+    flatten()：返回源数据的副本
+    squeeze()：只能对维数为1的维度降维
+    '''
     X_grid = np.c_[X1.ravel(), X2.ravel()]
     if hasattr(classifier, "decision_function"):
         decision_values = _call_classifier_chunked(classifier.decision_function,
